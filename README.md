@@ -1,6 +1,12 @@
-# 📊 Research Data Management Exercise
+# Skill Expansion & Research Data Management
 
-This project is an exercise for the Research Data Management Course 2025 by Elwazi. It involves the analysis of economic and health data for Sierra Leone, focusing on data cleaning, transformation, and visualization using R.
+This repository offers a structured pathway to broaden your technical and analytical abilities through hands-on exercises, tutorials, and real-world examples. It highlights the pivotal role of research data management, guiding you from data collection and organization to long-term preservation and responsible sharing.
+
+By weaving in best practices for metadata creation, version control, and reproducible workflows, this project empowers you to handle diverse datasets with confidence, ensuring your research remains transparent, reliable, and primed for future discovery.
+
+## Economic Analysis
+
+This repository provides a comprehensive examination of Sierra Leone’s economy through variables such as GDP growth, inflation rates, employment figures, trade balances, and sectoral outputs. You’ll sharpen your skills in data cleaning, statistical modeling, and visualization by working with real-world datasets.
 
 ## 📜 Table of Contents
 
@@ -9,6 +15,7 @@ This project is an exercise for the Research Data Management Course 2025 by Elwa
 - [Dataset](#dataset)
 - [File Structure](#file-structure)
 - [Analysis and Visualizations](#analysis-and-visualizations)
+- [Future Enhancements](#future-enhancements)
 - [Contributing](#contributing)
 - [License](#license)
 - [Acknowledgments](#acknowledgments)
@@ -28,17 +35,17 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Installation
 
-1.  **Clone the repository:**
-    ```sh
-    git clone <repository-url>
-    ```
-2.  **Open the project in RStudio:**
-    Open the `FAIR_DATA-Exercise.Rproj` file.
-3.  **Install R packages:**
-    Run the following command in the R console to install the necessary packages:
-    ```R
-    install.packages(c("ggplot2", "plotly", "readxl", "openxlsx", "dplyr", "lubridate"))
-    ```
+1. **Clone the repository:**
+   ```sh
+   git clone <repository-url>
+   ```
+2. **Open the project in RStudio:**
+   Open the `FAIR_DATA-Exercise.Rproj` file.
+3. **Install R packages:**
+   Run the following command in the R console to install the necessary packages:
+   ```R
+   install.packages(c("ggplot2", "plotly", "readxl", "openxlsx", "dplyr", "lubridate"))
+   ```
 
 ### Running the Analysis
 
@@ -75,44 +82,61 @@ For more detailed information about the dataset, please refer to the `MetaData.d
         └── about_visuals.md
 ```
 
--   **`.Rproj`**: The RStudio project file.
--   **`.R`**: The main R script for the analysis.
--   **`Research_data.xlsx`**: The dataset file.
--   **`Vizualizations/Vizualizations/`**: Contains the output visualizations from the R script.
--   **`Vizualizations/Vizualizations/about_visuals.md`**: Documentation for the visualizations.
--   **`MetaData.docx`**: Contains the metadata for the dataset.
--   **`GEMINI.md`**: Guidelines for interacting with this project using Gemini.
--   **`project_updates.md`**: A log of recent changes to the project.
--   **`LICENSE`**: The project license.
--   **`README.md`**: This file.
+- **`.Rproj`**: The RStudio project file.
+- **`.R`**: The main R script for the analysis.
+- **`Research_data.xlsx`**: The dataset file.
+- **`Vizualizations/Vizualizations/`**: Contains the output visualizations from the R script.
+- **`Vizualizations/Vizualizations/about_visuals.md`**: Documentation for the visualizations.
+- **`MetaData.docx`**: Contains the metadata for the dataset.
+- **`GEMINI.md`**: Guidelines for interacting with this project using Gemini.
+- **`project_updates.md`**: A log of recent changes to the project.
+- **`LICENSE`**: The project license.
+- **`README.md`**: This file.
 
 ## 📊 Analysis and Visualizations
 
 The `fair_d.R` script performs the following steps:
 
-1.  **Loads the data** from `Research_data.xlsx`.
-2.  **Cleans the data** by removing unnecessary columns and rows with missing values.
-3.  **Transforms the data**, including converting the 'year' column to a date format.
-4.  **Generates visualizations** to explore the relationships between different variables.
+1. **Loads the data** from `Research_data.xlsx`.
+2. **Cleans the data** by removing unnecessary columns and rows with missing values.
+3. **Transforms the data**, including converting the 'year' column to a date format.
+4. **Generates visualizations** to explore the relationships between different variables.
 
 The following visualizations are created:
 
--   A line chart showing the trend of GDP over the years.
--   A line chart showing the trend of the percentage of government expenditure on education.
--   A scatter plot of Government Health Expenditure vs. GDP Per Capita.
--   A linear regression plot of GDP Per Capita vs. Government Health Expenditure.
+- A line chart showing the trend of GDP over the years.
+- A line chart showing the trend of the percentage of government expenditure on education.
+- A scatter plot of Government Health Expenditure vs. GDP Per Capita.
+- A linear regression plot of GDP Per Capita vs. Government Health Expenditure.
 
 The generated plots are saved in the `Vizualizations/` directory in both HTML (interactive) and PNG (static) formats. You can find more details about the visualizations in `Vizualizations/Vizualizations/about_visuals.md`.
+
+## 🔮 Future Enhancements
+
+The current analysis provides a foundational understanding of the data. Future work could expand on this by incorporating more advanced econometric techniques to explore the causal impact of government health expenditure on GDP. Potential enhancements include:
+
+- **Advanced Regression Analysis:**
+
+  - **Multiple Regression:** Include other relevant variables (e.g., education expenditure, inflation) to build a more robust model of GDP.
+  - **Panel Data Analysis:** If data from multiple countries or regions were available, panel data models could control for unobserved heterogeneity.
+- **Time Series Analysis:**
+
+  - **ARIMA (Autoregressive Integrated Moving Average):** Model and forecast GDP and health expenditure as time series data.
+  - **GARCH (Generalized Autoregressive Conditional Heteroskedasticity):** Model the volatility in the economic data.
+  - **Vector Autoregression (VAR):** Analyze the dynamic relationships between multiple time series variables simultaneously.
+- **Causality Tests:**
+
+  - **Granger Causality Test:** Investigate whether past values of health expenditure can predict future values of GDP.
 
 ## 🤝 Contributing
 
 Contributions are welcome! Please follow these steps:
 
-1.  Fork the Project
-2.  Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3.  Commit your Changes (`git commit -m '''Add some AmazingFeature'''`)
-4.  Push to the Branch (`git push origin feature/AmazingFeature`)
-5.  Open a Pull Request
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m '''Add some AmazingFeature'''`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
 ## 📄 License
 
@@ -120,4 +144,4 @@ This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENS
 
 ## 🙏 Acknowledgments
 
--   Elwazi for the Research Data Management Course 2025.
+- Elwazi-Open Data Science Platform  for the Research Data Management Course.
