@@ -1,4 +1,4 @@
-# Skill Expansion & Research Data Management and Analysis.
+# Research Data Management and Analysis.
 
 This repository offers a structured pathway to broaden your technical and analytical abilities through hands-on exercises, tutorials, and real-world examples. It highlights the pivotal role of research data management, guiding you from data collection and organization to long-term preservation and responsible sharing.
 
